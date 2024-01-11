@@ -5,7 +5,11 @@ const morgan = require('morgan');
 const path = require('path');
 const port = 3000;
 
-          const route = require('./routes');
+const route = require('./routes');
+const db = require('./config/db');
+
+// Connect to database
+db.connect();
 
 // Use static folder
 app.use(express.static(path.join(__dirname, 'public')));
