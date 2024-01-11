@@ -7,7 +7,8 @@
     "beautiful": "lint-staged",
     "start": "nodemon --inspect src/index.js",
     "watch": "node-sass --watch src/resources/scss/app.scss src/public/css/app.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,11 @@
   "homepage": "https://github.com/luongxuanbach/blog_nodejs#readme",
   "lint-staged": {
     "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+  },
+  "husky": {
+    "hook": {
+      "pre-commit": "lint-staged"
+    }
   },
   "dependencies": {
     "express": "^4.18.2",
