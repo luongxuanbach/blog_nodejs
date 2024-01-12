@@ -1,0 +1,26 @@
+<div class="mt-4">
+  <h3>Register Course</h3>
+
+  <form method="post" action="/courses/store">
+    <div class="form-group">
+      <label for="name">Title</label>
+      <input type="text" class="form-control" id="name" name="name" />
+
+      <label for="description">Description</label>
+      <input type="text" class="form-control" id="description" name="description"/>
+
+      {{!-- <label for="image">Image</label>
+      <input type="text" class="form-control" id="image" name="image" /> --}}
+
+      <label for="level">Level</label>
+      <input type="text" class="form-control" id="level" name="level" />
+
+      {{!-- <label for="slug">Slug</label>
+      <input type="text" class="form-control" id="slug" name="slug" /> --}}
+
+      <label for="videoId">VideID</label>
+      <input type="text" class="form-control" id="videoId" name="videoId" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
